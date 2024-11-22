@@ -17,7 +17,7 @@ def preprocess_and_save_data(combined_df, save_path):
     combined_df['plot'] = combined_df['plot'].str.lower().fillna('')
     combined_df.to_csv(save_path, index=False)
 
-# if __name__ == "__main__":
+if __name__ == "__main__":
 #     data_folder = "./data/raw/"
 #     save_path = "./data/processed/combined_movies.csv"
 #     combined_df = load_and_combine_data(data_folder)
