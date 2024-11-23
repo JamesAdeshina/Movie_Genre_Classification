@@ -12,10 +12,10 @@ import os
 #     combined_df = pd.concat(dataframes, ignore_index=True)
 #     return combined_df
 
-def preprocess_and_save_data(combined_df, save_path):
-    # Example preprocessing: lowercase, drop NA
-    combined_df['plot'] = combined_df['plot'].str.lower().fillna('')
-    combined_df.to_csv(save_path, index=False)
+# def preprocess_and_save_data(combined_df, save_path):
+#     # Example preprocessing: lowercase, drop NA
+#     combined_df['plot'] = combined_df['plot'].str.lower().fillna('')
+#     combined_df.to_csv(save_path, index=False)
 
 if __name__ == "__main__":
     data_folder = "./data/raw/"
