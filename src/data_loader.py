@@ -1,16 +1,16 @@
 import pandas as pd
 import os
 
-def load_and_combine_data(data_folder):
-    dataframes = []
-    for genre_file in os.listdir(data_folder):
-        if genre_file.endswith(".csv"):
-            genre = genre_file.replace(".csv", "")
-            df = pd.read_csv(os.path.join(data_folder, genre_file))
-            df['genre'] = genre  # Add genre label
-            dataframes.append(df)
-    combined_df = pd.concat(dataframes, ignore_index=True)
-    return combined_df
+# def load_and_combine_data(data_folder):
+#     dataframes = []
+#     for genre_file in os.listdir(data_folder):
+#         if genre_file.endswith(".csv"):
+#             genre = genre_file.replace(".csv", "")
+#             df = pd.read_csv(os.path.join(data_folder, genre_file))
+#             df['genre'] = genre  # Add genre label
+#             dataframes.append(df)
+#     combined_df = pd.concat(dataframes, ignore_index=True)
+#     return combined_df
 
 def preprocess_and_save_data(combined_df, save_path):
     # Example preprocessing: lowercase, drop NA
